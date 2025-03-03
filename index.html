@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_index_exe</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form>
+        <label for="user">Nome</label>
+        <input id="user" type="text" placeholder="Seu nome" required>
+        <br />
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="Seu E-mail" required>
+        <br />
+        <label for="pass">Senha</label>
+        <input id="pass" type="password" placeholder="Sua Senha" required>
+        <br />
+        <button id="cadastro">Cadastro</button>
+    </form>
+    <script>
+        document.getElementById('cadastro').addEventListener('click', function() {
+            const label1Info = document.getElementById('user').innerText;
+            const label2Info = document.getElementById('email').innerText;
+            const label3Info = document.getElementById('pass').innerText;
+
+            alert('Saved Information:\n' + label1Info + '\n' + label2Info + '\n' + label3Info);
+        });
+    </script>
+</body>
+</html>
