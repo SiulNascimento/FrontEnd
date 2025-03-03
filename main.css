@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    background-color: #192a56;
+    padding-top: 16px;
+    color: #fff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container,
+footer > .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav {
+    background-color: #575fcf;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu {
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.container-flex {
+    display: flex;
+}
+
+#Sobre img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-shoos {
+    flex-wrap: wrap;
+}
+
+.lista-shoos li {
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 16px;
+}
+
+.lista-shoos li img,
+.item-central img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.lista-shoos li h3 {
+    margin: 8px 0;
+}
+
+.item-central { 
+    margin: 0 5%;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #131197;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #0033aa;
+}
+
+@media (max-width: 1023px) {
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #sobre img {
+        width: 80%;
+    }
+
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
