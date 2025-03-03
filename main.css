@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #c727cd;
+    padding: 16px 0;
+    color: #fff;
+    display: flex;
+    border-bottom: 16px solid #971f6f;
+    justify-content: center;
+    text-transform: uppercase; /*uppercase=maiscula*/
+    font-style: italic;
+}
+
+header button {
+    margin-left: 24px;
+}
+
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, 
+button {
+    padding: 8px;
+}
+
+button {
+    background-color: #009432;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+#cancelar {
+    background-color: red;
+}
+
+#new_tasks {
+    background-color: #fff;
+    color: #000;
+}
+
+ul {
+    display:block;
+    text-align: center;
+}
+
+ul li {
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+ul li:hover {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+    cursor: pointer;
+}
