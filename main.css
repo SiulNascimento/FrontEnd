@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header { /*Nota11*/
+    background-color: rgb(34, 31, 36); /*cor do fundo do cabeçalho Nota5*/
+    color: rgb(255, 255, 255); /*aqui conseguimos escolher a cor da letra que queremos*/
+    padding: 16px 0; /*aqui estamos delimitando o tamanho do cabeçalho nota 6*/
+}
+
+body > header h1 {
+    font-size: 48px;
+    font-family: Tahoma, sans-serif;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between; /*cria um espaçamento entro os elementos de todo o conteudo*/
+    align-items: center; /*alinha todos os items com um linha imaginária, atenção que é apenas na vertical*/
+}
+
+header li {
+   display: inline; /*display arranja os elementos solicitados de acordo com o pedido */
+   text-decoration: none;
+   font-family: Tahoma, sans-serif;
+   margin-left: 16px;
+}
+
+header li a {
+   text-decoration: none; /*retira toda a decoração do texto, seja italico, negrito, sublinhado, etc*/
+   color: white;
+}
+
+.container {
+    width: 1366px; /*tamanho da página, sendo 1366pixel o tamanho padrão de um monitor */
+    margin: 0 auto; /*margem, define as margens da página ver notas 2*/
+}
+
+section .articles {  /*Nota que o "section" é apenas para ensinar, não sendo obrigatório*/
+    display: flex;
+    flex-wrap: wrap; /*Nesta nova função, estamos dizendo que no caso de termos mais secções do tamanho per-
+    mitido a página irá criar uma nova linha, de notar que este wrap de contiúdos é ligado ao width definida
+    abaixo. Nota 4*/
+    justify-content: space-between;
+}
+
+.articles article img {
+    width: 100%;
+    /*height: 180px; /*definição do tamanho das imagens, nota que o caminho tem que ser bem descrito nota 3*/
+}
+
+.articles article {
+    width: 30%; /*tamanho de cada artigo, no caso estamos defenindo o tamanho máximo ocupado em cada linha*/
+}
+
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article { /*Nota 7*/
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+.articles article h3 {
+    margin-top: 16px;
+    margin-top: 16px;
+    font-family: Tahoma, sans-serif
+}
+
+.articles article a {
+    background-color: darkblue;
+    color: #fff;
+    padding: 8px;
+    display: inline-block; /*Nota 8*/
+    text-decoration: none;
+    font-weight: 500; /*peso da letra ou seja espessura bold=700*/
+    margin-top: 8px;
+}
+
+.articles article a:hover /*quando o rato estiver sobre esse elemento*/ { /*Nota 9*/
+    background-color: rgb(248, 248, 248);
+    text-decoration: underline;
+    color: rgb(150, 145, 145);
+}
+
+.articles article p,
+.articles article a {
+    font-family: Tahoma, sans-serif
+}
+
+section h2 {
+    font-size: 32px;
+    font-family: Tahoma, sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+}
+section h3 {
+    font-size: 24px;
+}
+
+#sports { /*Nota10*/
+    background-color: rgb(240, 240, 155);
+}
+#sports .articles article a{
+    background-color: rgb(20, 48, 20);
+}
+
+#economy {
+    background-color: rgb(156, 241, 241);
+}
+#economy .articles article a{
+    background-color: rgb(19, 19, 43);
+}
+
+#entertainment {
+    background-color: rgb(201, 149, 250);
+}
+#entertainment .articles article a{
+    background-color: rgb(48, 20, 36);
+}
+
+#tecnology {
+    background-color: rgb(250, 149, 149);
+}
+#tecnology .articles article a{
+    background-color: rgb(39, 14, 14);
+}
+
+
+
+
+/*                      ***** Notas *****
+
+1 - Para muitas vezes conseguirmos fazer as coisas de formas separadas utilizamos <div> de forma a criar os
+devidos grupos de elementos, sendo a conotação mais comum container para defenir esse mesmo elemento global
+2 - Para as margens podemos adotar 3 metodos diferentes: no caso das margens temos cima, esq, baixo e esq
+então podemos escrever valores separados para os 4, ou agrupar eles em 2 grupos esq&dir e cima&baixo ou ainda
+apenas 1 valor... ex:
+                        margin: 0 4 5 6     ou      margin: 0 auto          margin: auto
+3 - Height, altura é uma das medidas usadas para definir a imagem, sendo que apenas é necessário descrever
+ou mencionar uma delas para a outra ser alterada e ajustada de forma automática. Para o preenchimento total da
+secção, neste caso da notícia for utilizado o width, que significa largura. Ao colocar a largura ou percenta-
+gem que queremos o site irá realizar as devidas alterações nos restante parametros, podendo ainda ser movida,
+centrada etc, de acordo com a vontade do programador.
+4 - Section .Article ou apenas .Article é a classe mãe de todas as coisas abaixo delas, sendo assim as imagens
+o tamanho dos artigos, o comprimento e por aí fora estão inseridos nelas. No caso de querermos mexer em alguma
+parte específica é necessário alterar nesse mesmo campo, porém quando o assunto involve toda a secção é neces-
+sário mexer na raiz. Um bom exemplo é este aqui, onde apesar de termos definido os artigos para 30% de ocupação
+da página foi necessário alterar no .articles para ele entender e fazer uma nova linha.
+    Ainda aqui podemos ver que no "justify-content" - conteúdo justificado foi atualizado para espaço entre eles
+o mesmo processo caí na categoria anterior em que apesar de estarmos a mexer com o contiúdo, é necessário ajus-
+tar na raiz da secção, de outra forma, pode ocorrer um erro visual ou não fazer nada.
+5 - No caso das cores existem 3 formas diferentes de escolher elas, pelo nome em inglês red, blue, yellow, etc;
+pelo hexadecimal branco = #FFFFFF ou ainda decimal rgb branco = rgb(255,255,255) (no caso deste ultimo clicando
+no quadrado da cor é possível escolher a mesma pelo painel de cores que aparece;
+6 - Padding é uma ferramenta delimitante defenindo não só a posição em relação à box do cabeçalho como o seu
+tamanho, tornando-se importante para casos como este, podemos mexer de forma a ver o comportamento dele, es-
+colhendo diversos valores para alterar a sua dimensão e posição dos elementos; é ainda importante recordar que
+1 e 3 elemento correspondem ao cima e baixo, 2 e 4 direita e esquerda respectivamente como no ponto 2, podendo
+ainda usar o auto como em qualquer outro;
+7 - Podemos no Css, aproveitar regras já criadas atraves do " , + enter " . Dessa forma estamos atrelando 2 
+atributos para as mesmas regras no CSS
+8 - Muitas vezes um texto marcado ou botão ficam sobroposto ao texto sendo necessário alterar o display em 
+evidência para inline block.
+9 - Quando temos botões ou elementos de clique que queremos usar algo para os diferenciar e mostrar que é algo
+diferente usamos a opção :hover ; dessa forma quando o rato estiver sobre esse elemento o seu comportamento 
+vai ser diferente do normal sinalizando algo diferente para o usuário.
+10 - Para marcar toda a secção foi descrito no html que :"<section id="sports">" nisto podemos afirmar que a 
+secção desporte tem um id que a caracteriza no caso o ID que é sports. Para utilizarmos essa mesma secção é só
+informar pelo cardinal (#) mais o seu id.
+11 - Neste caso como temos várias secções com o nome genérico <header> no html, ao fazer alguma alteração no
+css irá alterar para todos, sendo assim é necessário especificvar qual serio o que queremos mexer. 
+Assim apenas estamos mexendo no atributo atrelado directamente ao corpo do site (body) e não a todos.
