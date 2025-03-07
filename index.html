@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap Fundamentals</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!--BootStrap1-->
+    <h1>BootStrap Fundamentals</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 g-0"> <!--g // gap (padding base imposto pelo próprio bootstrap)-->
+                <h1>Destaques</h1>
+            </div>
+            <div class="col-4">
+                <h2>Barra Lateral</h2>
+            </div>
+            <div class="col">
+                Coluna #3
+            </div>
+            <div class="col">
+                Coluna #4
+            </div>
+            <div class="col">
+                Coluna #5
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <col>
+                <img src="https://via.placeholder.com/180x180" alt="placeholder">
+                <h3>Coluna</h3>
+            </col>
+            <col>
+                <img src="https://via.placeholder.com/180x180" alt="placeholder">
+                <h3>Coluna</h3>
+            </col>
+            <col>
+                <img src="https://via.placeholder.com/180x180" alt="placeholder">
+                <h3>Coluna</h3>
+            </col>
+            <col>
+                <img src="https://via.placeholder.com/180x180" alt="placeholder">
+                <h3>Coluna</h3>
+            </col>
+            <col>
+                <img src="https://via.placeholder.com/180x180" alt="placeholder">
+                <h3>Coluna</h3>
+            </col>
+        </div>
+    </div>
+    <!--BootStrap2-->
+    <table class="table table-danger">
+        <caption>Tabela de produtos</caption>
+        <thead>
+            <th>Nome do Produto</th>
+            <th>Preço Original</th>
+            <th>Preço Atual</th>
+            <th>Desconto</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Iphone13</td>
+                <td>R$7.000.00</td>
+                <td>R$5.000.00</td>
+                <td>R$2.000.00</td>
+            </tr>
+            <tr>
+                <td>Iphone14</td>
+                <td>R$8.000.00</td>
+                <td>R$5.000.00</td>
+                <td>R$3.000.00</td>
+            </tr>
+            <tr>
+                <td>Iphone15</td>
+                <td>R$10.000.00</td>
+                <td>R$7.000.00</td>
+                <td>R$3.000.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--BootStrap3-->
+    <button class="btn btn-primary btn-md">Clique aqui</button>
+    <!--BootStrap4-->
+    <div class="accordion">
+        <div class="accordion-tiem">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#Resposta">
+                    Pergunta
+                </button>
+            </div>
+            <div class="accordion-collapse collapse" id="Resposta">
+                <div class="accordion-body">
+                    Resposta da Pergunta 1
+                </div>
+            </div>
+            <div class="accordion-collapse collapse" id="Resposta">
+                <div class="accordion-body">
+                    Resposta da Pergunta 2
+                </div>
+            </div>
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#Resposta1">
+                    Pergunta2
+                </button>
+            </div>
+            <div class="accordion-collapse collapse" id="Resposta1">
+                <div class="accordion-body">
+                    Resposta da Pergunta 1
+                </div>
+            </div>
+            <div class="accordion-collapse collapse" id="Resposta1">
+                <div class="accordion-body">
+                    Resposta da Pergunta 2
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--BootStrap5-->
+    <div class="alert alert-dark alert-dismissible">
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+        Exemplo de Alerta <a href="#">clique aqui</a>
+    </div>
+    <!--BootStrap6-->
+    <div>
+        <div class="row">
+            <div class="col">
+                <h2>Form</h2>
+                <form>
+                    <label class="form-label" for="nome" >Seu nome</label>
+                    <input class="form-control" type="text" id="nome" placeholder="Nome">
+                    <label class="form-label" for="email" >Seu email</label>
+                    <input class="form-control" type="text" id="email" placeholder="Email">
+                    <label class="form-label" for="mensagem">Mensagem</label>
+                    <input class="form-control" type="text" id="mensagem" placeholder="Sua Mensagem">
+                    <div class="form-check">
+                        <label class="form-check-label" for="aceito-termos">Li e aceito os termos</label>
+                        <input class="form-check-input" id="aceito-termos" type="checkbox">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--
+                                                ****Notas*****
+
+BootStrap1 - Grid - No BootStrap a grid é definida por colunas (col) e linhas (row), sendo que nas colunas são separadas em intervalos de 12, quando ultrupassado esse 
+valor o próprio Bootstrap manda as colunas seguintes para as linhas abaixo; No bootstrap tambem temos tamanhos consuante o tamanho da tela (@media);
+    col-md-6 // md= médio, ocupará 6 colunas (metáde)
+    col-sm-12 // sm= pequeno (small), ocupará a linha toda 
+    col-lg-4 // lg= large(larga), ocupará um terço da linha
+
+                    Outra forma de escrever de forma mais rápida junto do bootstrap é digitar de forma automática a construção: 
+    Ex. .container>.row>col*5>img+h3
+    
+    .container - cria a div class container
+    .row - cria a div class row
+    col*5 - cria 5 colunas
+    img - cria uma tag de imagens em cada uma das colunas
+    h3 - cria uma tag de h3 em cada uma das colunas
+
+BootStrap2 - Table - Apesar de o BootStrap já estilizar a tabela, não confere à mesma o tamanho sendo preciso alterar o mesmo
+manualmente, ou atravez de <style> no html ou atravez de um css.
+    
+    table table-primary - confere um aspecto à tabela azul
+    table table-secundary - confere um aspecto à tabela cinza
+    table table-sucess - confere um aspecto à tabela verde
+    table table-danger - confere um aspecto à tabela vermelho
+    table table-warning - confere um aspecto à tabela amarelo
+    table table-info - confere um aspecto à tabela azul
+    table table-light - confere um aspecto à tabela cinza-claro
+    table table-dark - confere um aspecto à tabela escuro
+
+BootStrap2 - Bottuns - As classes dos butões no bootstrap seguem o seguinte padrão btn btn-XXX (sendo o segundo opcional), desta forma o primeiro estiliza o butão 
+identificando a class e a parencia e a segunda a cor, nota que as mesmas seguem os mesmos padrões das tabelas, com a excessão do link e outline, onde aprimeira cria
+uma hiperligação para outra página e a segunda remove o fundo e deixa apenas as bordas das respectivas cores; Os botões seguem também as dimensões das grid conforme
+o exemplo em cima.
+
+• btn-primary; • btn-secondary; • btn-success; • btn-Danger; • btn-warning; • btn-info; • btn-light; • btn-dark; • btn-link; • btn-outline;
+
+    BootStrap4 - accordions - Accordions nada é mais que um bottão que usa o colapso internamente para torná-lo desmontável, da mesma forma que o instrumento acordeom
+funciona, dessa forma poupamos espaça e não sobrecarregamos o usuário de informações. A forma de uso dele é bem simples com especial atenção às classes, 
+(https://getbootstrap.com/docs/5.0/components/accordion/), dessa forma podemos sempre estilizar o mesmo conforme as necessidades ou aparência que queremos; Importante
+relembrar que é necessário o script do bootstrap para o mesmo funcionar.
+
+    Nota - Show - quando carregada a página ele já vem exibindo as opções, é utilizado no caso de já estar aberto e termos dado um reload ou um "go back" na página;
+        - data-bs-toggle - toggle define a função/comportamento que queremos; Deve ser sempre seguida ou antecedida de um data-bs-target, dessa forma o computador consegue
+        intrepertar qual a data que deve ser utilizada no comportamento. Já o bs representa bootstrap, daí só poder ser usada quando o link de JS do bootstrap está no
+        código;
+        - data-bs-target - define qual é a data que vai ser afetada, nota que o elemento conforme em outras linguagens e se tratar de uma de um ID terá que levar um #;
+
+    BootStrap5 - Alert - O alerta demonstrado é muitas das vezes uma mensagem informativa de um erro ou outra coisa que pode informar o utilizador, sendo que quando é 
+    apertado o X, o bootstrap remove o mesmo do DOM (página web e não código). Para tal podemos escolher o lado do X acrescentando alert-dismissible como no exemplo 
+    caso queiramos do lado direito, ou do lado esquerdo não tendo o atributo anterior; Nota para as cores 
+
+    BootStrap6 - Forms - Aqui criamos um formulário com base nas caracteristicas do bootstrap, no exemplo em cima foi criado um form com base em linhas e colunas.
+    Sendo que os comportamentos são os mesmos que os anteriores, entre eles, o form-check funciona como o alert dismissible, tamanhos e afins;
+
+-->
