@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        .navbar-nav .nav-link.active {
+            color: #FFF;
+        }
+
+        .nav-link {
+            text-align: center;
+        }
+
+        section {
+            height: 100vh;
+            background-color: #CCC;
+            padding-top: 120px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #FFF
+        }
+    </style>
+</head>
+<body>
+    <header id="cabeçalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Titulo</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="promoções">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabeçalho">
+        <section id="inicio">
+            <h2>inicio</h2>
+        </section> <!--0-->
+        <section id="produtos">
+            <h2>produtos</h2>
+            <div class="container">
+                <nav class="nav nav-pills"> <!--4-->
+                    <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button">Eletronicos</button> <!--1 & 2-->
+                    <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button">Eletronicos1</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button">Eletronicos2</button>
+                </nav>
+                <div class="tab-content"> <!--3-->
+                    <div class="tab-pane active" id="aba1">
+                        Conteudo da aba Eletronicos
+                    </div>
+                </div>
+                <div class="tab-content"> 
+                    <div class="tab-pane" id="aba2">
+                        Conteudo da aba Eletronicos1
+                    </div>
+                </div>
+                <div class="tab-content"> 
+                    <div class="tab-pane" id="aba3">
+                        Conteudo da aba Eletronicos2
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promoções">
+            <h2>promoções</h2>
+        </section>
+        <section id="contato">
+            <h2>contato</h2>
+        </section>
+    </div>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!--                            Notas                                     -->
+
+<!--
+    0 - Inicio das Abas
+    1 - O nav-link estaliza o botão e a sua aparência para um link.
+    2 - Mais uma vez o active define qual é a exibição ou o 
+    primeiro item a ser mostrado. Dessa forma existe uma diferente 
+    conforme nas imagens na selação dos elementos.
+    3 - Aqui temos o tab-content que mostra o conteudo da aba (tab=aba inglês)
+        E o tab-pane que é um container para o conteudo associado com a aba 
+        dentro de um interface de subabas como este exemplo em que um aba é 
+        responsável por um sistema dentro de cada uma e o seu conteudo. 
+    4 - Aqui podemos ver que o sistema funciona de acordo com a nossa vontade 
+    em que o tipo, formato e outros é defenido pela nossa vontade. Por exemplo
+    o nav-tabs dá a aparencia das abas de qualquer brownser, porem o pills 
+    (neste momento) tem um efeito mais de comprimido.
+
+-->
+    <!---->

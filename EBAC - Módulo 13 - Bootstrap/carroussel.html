@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carroussel</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        img{
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="carousel-teste" class="carousel carousel-fade slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+                <div data-bs-interval="1000" class="carousel-item active">
+                    <img src="https://images.pexels.com/photos/28638641/pexels-photo-28638641/free-photo-of-vista-dramatica-da-ponte-de-manhattan-da-brooklyn-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"/>
+                </div>
+                <div data-bs-interval="1000" class="carousel-item">
+                    <img src="https://images.pexels.com/photos/28759041/pexels-photo-28759041/free-photo-of-paisagem-marinha-dramatica-com-nuvens-sombrias-ao-por-do-sol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                </div>
+                <div data-bs-interval="1000" class="carousel-item">
+                    <img src="https://images.pexels.com/photos/29404649/pexels-photo-29404649/free-photo-of-paisagem-de-montanha-nevada-com-floresta-de-outono.jpeg"/>
+                </div>
+        </div>
+        <button data-bs-target="#carousel-teste" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#carousel-teste" data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-teste" class="active" data-bs-slide="0"></button>
+            <button type="button" data-bs-target="#carousel-teste" data-bs-slide="1"></button>
+            <button type="button" data-bs-target="#carousel-teste" data-bs-slide="2"></button>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
