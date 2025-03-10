@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(238, 238, 238, 0.9333333333);
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 16px 0;
+  background-color: #01a3a4;
+  text-align: center;
+}
+
+.form-container {
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 760px;
+}
+.form-container h2 {
+  text-align: center;
+  font-size: 48px;
+}
+.form-container form {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 40px;
+}
+.form-container form label {
+  font-weight: bold;
+  cursor: pointer;
+}
+.form-container form input {
+  padding: 8px;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #01a3a4;
+}
+.form-container form button {
+  padding: 8px;
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: #00d2d3;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/*
+                        *********NOTAS*********
+
+Nota 1 - Aqui podemos ver que apenas alterando o input e o button o espaço usado não é 100%
+mas sim de acordo com o container na qual elas estão delimitadas, sendo assim temos tambem
+de definir o próprio container onde estão inseridas o mesmo valor para o uso total.
+Nota 2 - Aqui height: calc(100vh - 70px); podemos ver que é feito um calculo segundo o 
+viewerhigh, ou seja, a toda a área visivel do usuário é subtraído o valor de altura do cabe-
+çalho daí termos os 100% da página visivel menos os 70pixeis do cabeçalho.
+Nota 3 - Mixin é uma forma de englobar as mesmas regras e reaproveitar elas para quando nece-
+ssárias do mesmo tipo que uma variável. Assim podemos no mesmo arquivo ter várias mixin e
+reaproveitar as mesmas; Nota que elas tem que estar acima do código onde usadas, de outra 
+forma não funcionam.
+Nota 4 - Para incluirmos as regras acima é só adicionar @include mais o valor dado neste caso
+elementosform();
+Nota 5 - Na mixin ainda podemos setar como padrão algumas normas, como no caso acima referido
+na qual é adicionado à função destino qualquer alteração a esse parametro específico entre (); 
+Nota 6 - dado as variáveis estarem adicionadas numa outra pasta é necessário encaminhar as 
+mesmas respectivamente de forma ao SCSS aceder a elas.
+
+*/
+
+/*# sourceMappingURL=main.css.map */
