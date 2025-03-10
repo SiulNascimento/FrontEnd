@@ -1,0 +1,123 @@
+@import "mapas.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.marginBotton16 {   //mixin do LESS funciona como uma criação de uma variável
+    margin-bottom: 16px;
+}
+.marginBotton2 {    //mixin do LESS funciona como uma criação de uma variável
+    margin-bottom: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @fonteprincipal;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #color[cordefundo];
+    color: #color[textcor];
+}
+
+header {
+    padding: 24px;
+
+    .profile-pic {
+        display: block;
+        margin: 0 auto;
+        border-radius: 100px; //ou 50% dado ser um circulo só reduzir
+    }
+
+    .profile-bio {
+        text-align: center;
+        margin: 16px 0;
+        padding: 4px;
+        &-name {            // O & siginifica a classe anterior como o " " " no portugues
+            font-size: 48px;
+            .marginBotton2();
+        }
+
+        &-rank {
+            font-size: 30px;
+            .marginBotton16();
+            font-family: @fonteprincipal;
+        }
+
+        &-description {
+            font-size: 20px;
+            opacity: 0.5;
+            font-family: @fontesecundaria;
+        }
+    }
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    
+    @media @breakpointTablet {
+        background-color: #color[cordefundotablet];
+        color: #color[textcortablet];
+        max-width: 80%;
+    }
+    @media @breakpointMobile {
+        background-color: #color[cordefundomobile];
+        color: #color[textcormobile];
+        max-width: 70%;
+    }
+}
+
+.sociallinks {
+    &-icones {
+        display: flex;
+        justify-content: space-between;
+        max-width: 460px;
+        width: 100%;
+        margin: 0 auto 40px;
+    
+        li{
+            list-style: none;
+            //padding: 0 40px; - tambem funciona
+            //margin: 0 40px; - tambem funciona
+
+                img {
+                    transition: all ease .3s;
+                    &:hover{
+                        transform: scale(1.7);
+                    }
+                }
+        }
+    }
+}
+
+.projects {
+
+    &-item {
+
+        a {
+            font-size: 30px;
+            text-decoration: none;
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            background-color: #color[buttoncor];
+            color: #color[textcor];
+            font-family: @fonteprincipal;
+            text-align: center;
+            border-radius: 40px;
+            border: 2px solid #color[buttoncor];
+            transition: all ease .3s;
+                    &:hover{
+                        transform: scale(1.1);
+                        background-color: transparent;
+                        color: #color[buttoncor];
+                    }
+        }
+    }
+}

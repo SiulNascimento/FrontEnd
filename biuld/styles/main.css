@@ -1,0 +1,99 @@
+.marginBotton16 {
+  margin-bottom: 16px;
+}
+.marginBotton2 {
+  margin-bottom: 2px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yanone Kaffeesatz", serif;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-color: #222f3e;
+  color: #c8d6e5;
+}
+header {
+  padding: 24px;
+}
+header .profile-pic {
+  display: block;
+  margin: 0 auto;
+  border-radius: 100px;
+}
+header .profile-bio {
+  text-align: center;
+  margin: 16px 0;
+  padding: 4px;
+}
+header .profile-bio-name {
+  font-size: 48px;
+  margin-bottom: 2px;
+}
+header .profile-bio-rank {
+  font-size: 30px;
+  margin-bottom: 16px;
+  font-family: "Yanone Kaffeesatz", serif;
+}
+header .profile-bio-description {
+  font-size: 20px;
+  opacity: 0.5;
+  font-family: "Ysabeau SC", serif;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    background-color: #57606f;
+    color: #2f3542;
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    background-color: #a4b0be;
+    color: #2f3542;
+    max-width: 70%;
+  }
+}
+.sociallinks-icones {
+  display: flex;
+  justify-content: space-between;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+.sociallinks-icones li {
+  list-style: none;
+}
+.sociallinks-icones li img {
+  transition: all ease 0.3s;
+}
+.sociallinks-icones li img:hover {
+  transform: scale(1.7);
+}
+.projects-item a {
+  font-size: 30px;
+  text-decoration: none;
+  display: block;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background-color: #747d8c;
+  color: #c8d6e5;
+  font-family: "Yanone Kaffeesatz", serif;
+  text-align: center;
+  border-radius: 40px;
+  border: 2px solid #747d8c;
+  transition: all ease 0.3s;
+}
+.projects-item a:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+  color: #747d8c;
+}
